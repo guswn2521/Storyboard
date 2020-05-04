@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Hanna', serif;
+}
+body{
+    color:#1e1722;
+    background-color:rgb(255, 240, 244);
+}
+li{list-style: none;}
+a{text-decoration:none;}
+#wrap{
+	min-height:100%;
+}
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:80px;
+    z-index:2000;
+    background-color:rgb(255, 255, 255);
+}
+#line{
+    background-color:rgb(255, 0, 55);
+    position:fixed;
+    top:80px;
+    left:100px;
+    width:90%;
+    height:5px;
+    z-index:2000;
+}
+#line:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.content-wrapper{
+	z-index:1000;
+	position:relative;
+	margin-top:100px;
+	margin-bottom:70px;
+	padding-bottom:70px;
+	overflow:hidden;
+}
+nav{float:right;}
+.logo{
+    display:inline-block;
+    height:80px;
+    margin-left:20px;
+}
+.logo>img{height:80px;}
+.nav-items{
+    margin:auto 70px;
+}
+.nav-items>li{
+    display:inline-block;
+    line-height:80px;
+    padding:0 20px;
+    color:rgba(0, 0, 0, 0.6);
+}
+.nav-items>li>a:hover{color:rgba(0, 0, 0, 1.0); }
+h3{
+	background-color:white;
+	margin:10px;
+	padding:10px;
+	border-radius:10px;
+	width:200px;
+}
+.board{
+	width:800px;
+	left:50%;
+    margin-left:-400px;
+    position:relative;
+    text-align:center;
+    background-color:rgb(255, 255, 255);
+    border-collapse: collapse;
+}
+tr{
+    border-bottom:1px solid rgb(148, 148, 148);
+    border-top:1px solid rgb(148, 148, 148)
+}
+th,td{height:50px;}
+input[name="writebutton"]{
+	position:absolute;
+    border-radius:10px;
+    background-color:rgba(255, 0, 55, 0.6);
+    color:white;
+    height:40px;
+    width:100px;
+    left:50%;
+    margin-left:-400px;
+    margin:10px;
+}
+footer{
+    position:relative;
+    bottom:0;
+    margin-top:-70px;
+    width:100%;
+    height:70px;
+    padding:0 20px;
+    line-height:20px;
+    color:#8a8c8f;
+    font-size:15px;
+    border-top:3px solid #dee5e7;
+    background-color:rgb(236, 236, 236);
+}
+footer>li{
+    margin:auto;
+    text-align: center;
+}
+footer>li>span{color:black;}

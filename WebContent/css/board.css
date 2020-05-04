@@ -1,0 +1,79 @@
+.content-wrapper{
+    width:800px;
+    border: 1px solid rgb(219, 219, 219);
+    padding:30px;
+    position:relative;
+    left:50%;
+    text-align:left;
+    margin-left:-400px;
+    margin-top:100px;
+    margin-bottom:100px;
+	padding-bottom:70px;
+	overflow:auto;
+}
+h1{
+    color:rgb(68, 68, 68);
+    margin:10px;
+    padding:10px;
+    text-align:center;
+}
+h3{
+    margin: 30px;
+    padding:20px;
+    background-color:rgba(255, 0, 55,0.4);
+    border-radius:10px;
+    text-align:center;
+    width:400px;
+}
+form>input{
+    position:relative;
+    margin:5px 30px;
+    padding:10px;
+    border-radius:6px;
+    width:650px;
+    height:20px;
+}
+input[type="button"]{
+    border-radius:10px;
+    background-color:rgba(255, 0, 55,0.6);
+    color:white;
+    height:40px;
+    width:100px;
+}
+button{
+	border-radius:10px;
+    background-color:rgba(255, 0, 55,0.6);
+    color:white;
+    height:40px;
+    width:100px;
+}
+#content{
+    height:150px;
+}
+table{
+    position:relative;
+    left:50%;
+    width:700px;
+    margin-left:-350px;
+    margin-top:0;
+    text-align:center;
+    background-color:rgb(255, 255, 255);
+    border-collapse: collapse;
+}
+td,th{
+    border-left:1px solid rgb(148, 148, 148);
+    border-right:1px solid rgb(148, 148, 148);
+}
+#dpw{
+    width:300px;
+}
+#material{
+    padding:20px;
+    font-size:20px;
+    line-height: 20px;
+    overflow:auto;
+}
+.button{
+    padding:20px;
+    margin:15px 240px;}
+#enroll{margin-left:380px;margin-top:20px;}
