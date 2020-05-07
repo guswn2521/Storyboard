@@ -1,20 +1,16 @@
 package com.bigdata.common;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
-
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
-
 public class JDBCUtill {
 	public static Connection getConnection() {
 		Context context = null;
 		DataSource dsSource = null;
 		Connection conn = null;
-		
 		try {
 			context = new InitialContext();
 			dsSource = (DataSource)context.lookup("java:comp/env/jdbc/Mysql");
@@ -71,6 +67,5 @@ public class JDBCUtill {
 			stmt = null;
 			conn = null;
 		}
-	}
-	
+	}	
 }

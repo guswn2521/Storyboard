@@ -24,7 +24,7 @@ if(result==0){%>
 	<%}else if(result==1){
 		session.invalidate();%>
 		<script>
-			alert('회원탈퇴가 정상처리되었습니다. 더 조은 서비스로 다시뵙겠습니다.');
+			alert('회원탈퇴가 정상처리되었습니다. 더 좋은 서비스로 다시뵙겠습니다.');
 			location.href='login.jsp';
 		</script>
 	<%}

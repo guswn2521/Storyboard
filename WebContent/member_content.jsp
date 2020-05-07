@@ -14,11 +14,9 @@
 		<th>nickname</th>
 		<th>email</th>
 	</tr>
-
 	<%//db에서 전체멤버 정보가져오기.
 	MembersDao dao = MembersDao.getInstance();
 	ArrayList<MembersDto> memberList = dao.getMemberList();
-	
 	int i=1;
 	for(MembersDto member : memberList){ %>
 	<tr>
@@ -33,8 +31,6 @@
 		i++;
 	} %>
 </table>
-
-
 <%}else{ %>
 <h3>Member-로그인후</h3>
 <table class="board">
@@ -46,11 +42,9 @@
 		<th>nickname</th>
 		<th>email</th>
 	</tr>
-
 	<%//db에서 전체멤버 정보가져오기.
 	MembersDao dao = MembersDao.getInstance();
 	ArrayList<MembersDto> memberList = dao.getMemberList();
-	
 	int i=1;
 	for(MembersDto member : memberList){ %>
 	<tr>
@@ -65,6 +59,4 @@
 		i++;
 	} %>
 </table>
-
 <%} %>
-

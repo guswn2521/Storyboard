@@ -1,5 +1,15 @@
+<%@page import="com.bigdata.dto.boardDto"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.javalec.ex.boardDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+<%
+//글 목록 전체 가져오기
+boardDao dao = boardDao.getInstance();
+ArrayList<boardDto> boards = dao.getBoardAll();
+%>
+
 
 <table class="board">
 	<tr>
@@ -10,15 +20,25 @@
 		<th>조회</th>
 	</tr>
 
-	<%for(int i=1;i<=10;i++){ %>
+	<%
+	if(boards.size()>0){
+		String viewPath = "";
+		for(boardDto board : boards){
+			viewPath = request.getContextPath()+"/board/view.jsp?idx="+board.getIdx();
+	
+	 %>
 	<tr>
-		<td><%=i %></td>
-		<td><a href="/bigdata/board/view.jsp">게시판 글입니다 <%=i %></a></td>
-		<td>지후니</td>
-		<td>2020/11/<%=23-i %></td>
-		<td>1234</td>
+		<td><%=board.getIdx() %></td>
+		<%session.setAttribute("idx", board.getIdx());%>
+		<td><a href="<%=viewPath%>"> <%=board.getTitle() %></a></td>
+		<td><%=board.getName() %></td>
+		<td><%=board.getRegdate() %></td>
+		<td><%=board.getHit() %></td>
 	</tr>
-	<%} %>
+	<%} 
+	}else{
+		out.println("<tr><td colspan='5'>게시글이 없습니다.</td></tr>");
+	}%>
 
 	<tr>
 		<td colspan="5"><a href="#">[1]</a><a href="#">[2]</a><a href="#">[3]</a></td>
