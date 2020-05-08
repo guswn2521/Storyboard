@@ -35,16 +35,10 @@ p{
     color:rgb(255, 0, 55);
 }
 
-#cancle{
-    margin:0 10px 0 330px;
-    border-radius:10px;
-    width:100px;
+.button{
+	width:100px;
     height:40px;
-}
-#join{
     border-radius:10px;
     background-color:rgba(255, 0, 55,0.6);
     color:white;
-    height:40px;
-    width:100px;
 }

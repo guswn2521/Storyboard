@@ -21,6 +21,6 @@
 	<input type="text" placeholder="닉네임" name="nickname" onclick="value=''"><br> 
 	<input type="text" placeholder="E-mail" name="mail" onclick="value=''"><br>
 	
-	<input type="button" value="취소" id="cancle" onclick="location.href='/bigdata/login/login.jsp'">
-	<input type="submit" id="join" value="회원가입" onclick="joincheck()">
+	<input type="button" value="취소" class="button"onclick="location.href='/bigdata/login/login.jsp'">
+	<input type="submit" class="button" value="회원가입" onclick="joincheck()">
 </form>

@@ -15,11 +15,11 @@
         <%@include file="/layout/header.jsp" %>
     </header>
     <div id="line"></div>
-    <div class="content-wrap">
-        답변.
+    <div class="content-wrapper">
+        <%@include file="reply_content.jsp" %>
     </div>
     <%@include file="/layout/footer.jsp" %>
-    <script src="/storyboard/js/board.js"></script>
+    <script src="/bigdata/js/board.js"></script>
 </div>
 </body>
 </html>

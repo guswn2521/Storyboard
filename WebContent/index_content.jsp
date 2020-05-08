@@ -29,7 +29,6 @@ ArrayList<boardDto> boards = dao.getBoardAll();
 	 %>
 	<tr>
 		<td><%=board.getIdx() %></td>
-		<%session.setAttribute("idx", board.getIdx());%>
 		<td><a href="<%=viewPath%>"> <%=board.getTitle() %></a></td>
 		<td><%=board.getName() %></td>
 		<td><%=board.getRegdate() %></td>

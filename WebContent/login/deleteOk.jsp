@@ -29,16 +29,3 @@ if(result==0){%>
 		</script>
 	<%}
 }%>    
-    
-    
-    
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>deleteOk.jsp</title>
-</head>
-<body>
-
-</body>
-</html>

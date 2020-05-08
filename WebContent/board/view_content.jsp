@@ -2,14 +2,16 @@
 <%@page import="com.javalec.ex.boardDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	
-<%
-//글 1개 가져오기
-String sIdx = request.getParameter("idx");
-int idx = Integer.parseInt(sIdx);
-boardDao dao = boardDao.getInstance();
-boardDto board = dao.getBoardOne(idx);
 
+<%
+	String sIdx = request.getParameter("idx");
+	int idx = Integer.parseInt(sIdx);
+	boardDao dao = boardDao.getInstance();
+	//조회수 증가시키기
+	dao.setBoardHit(idx);
+	//글 1개 가져오기
+	boardDto board = dao.getBoardOne(idx);
+	String content = board.getContent().replace("\n","<br>");
 %>
 <h1>글 읽기</h1>
 <table>
@@ -35,7 +37,7 @@ boardDto board = dao.getBoardOne(idx);
 		<td colspan="3"><%=board.getTitle() %></td>
 	</tr>
 	<tr>
-		<td colspan="4" id="material"><%=board.getContent() %>
+		<td colspan="4" id="material"><%=content %>
 		</td>
 	</tr>
 	<tr>
@@ -44,7 +46,7 @@ boardDto board = dao.getBoardOne(idx);
 </table>
 <div class="button">
 	[<a href="/bigdata/index.jsp">목록</a>| <a
-		href="/bigdata/board/update.jsp">수정</a>| <a
-		href="/bigdata/board/answer.jsp">답변</a>| <a
-		href="/bigdata/board/delete.jsp">삭제</a>]
+		href="/bigdata/board/update.jsp?idx=<%=idx%>">수정</a>| <a
+		href="/bigdata/board/answer.jsp?idx=<%=idx%>">답변</a>| <a
+		href="/bigdata/board/delete.jsp?idx=<%=idx%>">삭제</a>]
 </div>

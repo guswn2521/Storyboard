@@ -33,20 +33,7 @@ form>input{
     width:650px;
     height:20px;
 }
-input[type="button"]{
-    border-radius:10px;
-    background-color:rgba(255, 0, 55,0.6);
-    color:white;
-    height:40px;
-    width:100px;
-}
-button{
-	border-radius:10px;
-    background-color:rgba(255, 0, 55,0.6);
-    color:white;
-    height:40px;
-    width:100px;
-}
+
 #content{
     height:150px;
 }
@@ -73,7 +60,13 @@ td,th{
     line-height: 20px;
     overflow:auto;
 }
+.buttons{
+    border-radius:10px;
+    background-color:rgba(255, 0, 55,0.6);
+    color:white;
+    height:40px;
+    width:100px;
+}
 .button{
     padding:20px;
     margin:15px 240px;}
-#enroll{margin-left:380px;margin-top:20px;}

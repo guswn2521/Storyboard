@@ -18,26 +18,7 @@
 	</header>
 	<div id="line"></div>
 	<div class="content-wrapper">
-		<%
-			int idx = (Integer)session.getAttribute("idx");
-			boardDao dao = boardDao.getInstance();
-			boardDto board = dao.getBoardOne(idx);
-		%>
-		<form action="updateOk.jsp" method="post" name="updateForm">
-        <h1>글 수정하기</h1>
-        <input value="<%=board.getName() %>" type="text" name="writer" id="user"><br>
-        <input value="<%=board.getEmail() %>" type="text" name="mail" id="mail"><br>
-        <input value="<%=board.getHomepage() %>" type="text" name="homepage" id="home"><br>
-        <input value="<%=board.getTitle() %>" type="text" name="title" id="title"><br>
-        <input value="<%=board.getContent() %>" type="text" name="contents" id="content"><br>
-        <input value="<%=board.getPw() %>" type="text" name="pw" id="pw"><br>
-        <div class="buttons">
-            <input type="submit" id="enroll" value="수정완료" onclick="updatecheck();">
-            <input type="button" id="fix" value="다시 수정" onclick="reset();">
-            <input type="button" id="back2" value="뒤로" onclick="window.history.back()">
-        </div>
-        </form>
-    
+    	<%@include file="update_content.jsp" %>
 	</div>
 	<!-- footer -->
 		<%@include file="/layout/footer.jsp" %>
